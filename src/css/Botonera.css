@@ -1,0 +1,15 @@
+.Botonera{
+    background-color: #13678A;
+}
+.nav-link{
+    color:white;
+    font-weight: bold;
+}
+.logo{
+    width: 140px;
+    height: 70px;
+    margin-left:auto;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5%;
+}

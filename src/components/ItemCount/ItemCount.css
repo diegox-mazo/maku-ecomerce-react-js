@@ -1,0 +1,13 @@
+.contenedor-card{
+    width: 18rem;
+}
+.card{
+    width: 18rem;
+    background-color: white;
+    border: solid;
+    border-color: blue;
+}
+
+.cantidad{
+    text-align: center;
+}

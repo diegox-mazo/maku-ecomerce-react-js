@@ -1,13 +1,10 @@
-.contenedor-card{
+.contador{
     width: 18rem;
 }
-.card{
-    width: 18rem;
-    background-color: white;
-    border: solid;
-    border-color: blue;
-}
+    .contador input{
+        text-align: center;
+    }
 
-.cantidad{
-    text-align: center;
+.stock{
+    background-color: rgb(225, 220, 220);
 }

@@ -1,14 +1,14 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './ItemListContainer.css';
-import ItemCount from '../ItemCount/ItemCount';
+import ItemList from '../ItemList/ItemList';
 
 function ItemListContainer(prop){
 
     return(
         <div className='list-container'>
-            <h2>{prop.children}</h2>
+            <h2 className='mb-5'>{prop.children}</h2>
             <div>
-                <ItemCount stock={5} initial={1}/>
+                <ItemList></ItemList>
             </div>
             
         </div>

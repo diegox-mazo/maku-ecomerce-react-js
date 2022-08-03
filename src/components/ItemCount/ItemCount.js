@@ -3,11 +3,10 @@ import './ItemCount.css';
 
 function ItemCount({stock, initial=1}){
     
-    let btnStatus = false;
-    let onAdd = 0;
+    let btnDisabled = false;
 
     if(stock===0){
-        btnStatus= true;
+        btnDisabled= true;
         initial = 0;
     }
 
@@ -27,26 +26,25 @@ function ItemCount({stock, initial=1}){
     }    
 
     function agregarCarrito(){
-        onAdd = contador;
-        console.log(`Se añadio al carrito ${onAdd} unidades del producto`);
+        if (contador!==0){
+            alert(`Se añadio al carrito ${contador} unidades del producto`);
+        }        
     }
     
     return(
-        <div className='contenedor-card'>
-            <div className="card" >
-                <img src="..." className="card-img-top" alt="..."/>
-                <div className="card-body">
-                    <h5 className="card-title">PRODUCTO</h5>
-                    <div className="input-group mb-3">
-                        <button className="btn btn-outline-secondary" type="button" onClick={disminuirContador}>-</button>
-                        <input type="text" className="form-control cantidad" value={contador} readOnly={true}></input>
-                        <button className="btn btn-outline-secondary" type="button" onClick={aumentarContador}>+</button>
-                    </div>
-                </div>
+
+        <div className="contador mx-auto">
+            <div className='stock mt-2'>
+                <h5>Stock disponible: {stock}</h5>
             </div>
-            <button type="button" className="btn btn-outline-primary m-2" onClick={agregarCarrito} disabled={btnStatus}>Agregar a Carrito</button>
-        </div>
-        
+            <div className="input-group mb-1">
+                <button className="btn btn-outline-secondary" type="button" onClick={disminuirContador}>-</button>
+                <input type="text" className="form-control" value={contador} readOnly={true}></input>
+                <button className="btn btn-outline-secondary" type="button" onClick={aumentarContador}>+</button>
+            </div>
+            <button type="button" className="btn btn-outline-primary" onClick={agregarCarrito} disabled={btnDisabled}>Agregar a Carrito</button>
+            
+        </div> 
 
     );
 }

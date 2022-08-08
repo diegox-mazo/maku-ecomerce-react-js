@@ -1,44 +1,56 @@
 [
     {
-        "id":"MC001",
+        "id": 1,
         "title":"Morral Outdoor Balard",
         "pictureUrl":"https://cdn-icons-png.flaticon.com/512/685/685681.png",
         "price":"$99.900",
-        "stock":"5"
+        "descripcion":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id sem lorem.",
+        "colores":"Rojo, Negro",
+        "stock": 5
     },
     {
-        "id":"MC002",
+        "id": 2,
         "title":"Tula Percros",
         "pictureUrl":"https://cdn-icons-png.flaticon.com/512/685/685681.png",
         "price":"$169.900",
-        "stock":"6"
+        "descripcion":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id sem lorem.",
+        "colores":"Azul, Blanco",
+        "stock": 6
     },
     {
-        "id":"MC003",
+        "id": 3,
         "title":"Morral Kiran",
         "pictureUrl":"https://cdn-icons-png.flaticon.com/512/685/685681.png",
         "price":"$169.900",
-        "stock":"4"
+        "descripcion":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id sem lorem.",
+        "colores":"Blanco, Negro",
+        "stock": 4
     },
     {
-        "id":"MC004",
+        "id": 4,
         "title":"Morral Plegable Collapse",
         "pictureUrl":"https://cdn-icons-png.flaticon.com/512/685/685681.png",
         "price":"$159.900",
-        "stock":"5"
+        "descripcion":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id sem lorem.",
+        "colores":"Verde, Negro",
+        "stock": 5
     },
     {
-        "id":"MC005",
+        "id": 5,
         "title":"Tula Super Cool 2 Go",
         "pictureUrl":"https://cdn-icons-png.flaticon.com/512/685/685681.png",
         "price":"$149.900",
-        "stock":"5"
+        "descripcion":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id sem lorem.",
+        "colores":"Azul, Verde",
+        "stock": 5
     },
     {
-        "id":"MC006",
+        "id": 6,
         "title":"Morral Rhimon",
         "pictureUrl":"https://cdn-icons-png.flaticon.com/512/685/685681.png",
         "price":"$249.900",
-        "stock":"5"
+        "descripcion":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id sem lorem.",
+        "colores":"Verde, Negro",
+        "stock": 5
     }
 ]

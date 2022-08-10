@@ -11,7 +11,7 @@ function Botonera(){
     return(
         <Navbar className='Botonera' expand="md">
             <Container>
-                <Navbar.Brand href="../../index.js">
+                <Navbar.Brand href="/">
                     <img
                         src={logo}
                         className="d-inline-block align-top logo"
@@ -21,11 +21,11 @@ function Botonera(){
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ms-auto gap-3">
-                    <Nav.Link className='nav-link' href="../../index.js">INICIO</Nav.Link>
-                    <Nav.Link className='nav-link' href="#link">NOSOTROS</Nav.Link>
-                    <Nav.Link className='nav-link' href="#link">GALERIA</Nav.Link>
-                    <Nav.Link className='nav-link' href="#link">CONTACTO</Nav.Link>
-                    
+                    <Nav.Link className='nav-link' href="/">INICIO</Nav.Link>
+                    <Nav.Link className='nav-link' href="/category/Sport">DEPORTIVO</Nav.Link>
+                    <Nav.Link className='nav-link' href="/category/Formal">FORMAL</Nav.Link>
+                    <Nav.Link className='nav-link' href="/category/Scolar">ESCOLAR</Nav.Link>
+                    <Nav.Link className='nav-link' href="#link">CONTACTO</Nav.Link>                    
                 </Nav>
                 </Navbar.Collapse>
 

@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import {NavLink} from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import ItemCount from '../ItemCount/ItemCount.js';
@@ -9,6 +10,8 @@ function ItemDetail({item}){
     const [show, setShow] = useState(true);
 
     const handleClose = () => setShow(false);
+
+    const initial = 1;
 
 
     return(
@@ -25,17 +28,17 @@ function ItemDetail({item}){
                         <div className='col'>
 
                             <h5 className="card-title">Descripcion:</h5>
-                            <p>{item.descripcion}</p>
+                            <p>{item.description}</p>
 
                             <h5 className="card-title">Colores:</h5>
-                            <p className="card-text">{item.colores}</p>
+                            <p className="card-text">{item.colors}</p>
 
                             <h5 className="card-title">Precio:</h5>
-                            <p className="card-text">{item.price}</p>
+                            <p className="card-text">${item.price}</p>
                         </div>
 
                         <div className='col'>
-                            <ItemCount stock={item.stock} initial={1}></ItemCount>
+                            <ItemCount item={item} initial={initial}></ItemCount>
                         </div>
 
                     </div>
@@ -43,14 +46,12 @@ function ItemDetail({item}){
 
             </Modal.Body>
             <Modal.Footer>
-            <Button variant="secondary" onClick={handleClose}>
-                Close
-            </Button>
+            <NavLink to="/">
+                <Button variant="secondary" onClick={handleClose}>Close</Button>
+            </NavLink>            
             </Modal.Footer>
         </Modal>
-    );      
-
-            
+    );            
 }
 
 export default ItemDetail;

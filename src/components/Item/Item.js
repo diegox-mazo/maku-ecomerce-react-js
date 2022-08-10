@@ -1,23 +1,23 @@
-import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import ItemCount from '../ItemCount/ItemCount';
-import ItemDetailContainer from '../ItemDetailContainer/ItemDetailContainer.js';
 import './Item.css';
 
 
 function Item({item}){
 
-    const [show, setShow] = useState(false);
+    const initial = 1;
 
-    // const handleClose = () => setShow(false);
-    const handleShow = () => {
+    // const [show, setShow] = useState(false);
+
+    /* const handleShow = () => {
         if (show === false) {
             setShow(true);
         }
         else{
             setShow(false);
         }        
-    };
+    }; */
 
     // ¿Como hacer para comunicar el estado True or false de un hijo al componente padre?
 
@@ -27,19 +27,23 @@ function Item({item}){
                 <img src={item.pictureUrl} className="card-img-top" alt={item.title}/>
                 <div className="card-body">
                     <h5 className="card-title">{item.title}</h5>
-                    <p className="card-text">{item.price}</p>
+                    <p className="card-text">${item.price}</p>
                     {/* <!-- Modal --> */}
-                    <Button variant="secondary" onClick={handleShow}>Detalles de Producto</Button>
+                    <NavLink to={`/detail/${item.id}`}>
+                        <Button variant="secondary">Detalles de Producto</Button>
+                        {/* <Button variant="secondary" onClick={handleShow}>Detalles de Producto</Button> */}
+                    </NavLink>
+                    
                 </div>
             </div>
-            <ItemCount stock={item.stock} initial={1}></ItemCount>
+            <ItemCount item={item} initial={initial}></ItemCount>
 
             {/* ItemDetailContainer */}
-            {
+            {/* {
                 show ?
                 <ItemDetailContainer item = {item}></ItemDetailContainer>
                 : null
-            }           
+            }    */}        
 
         </div>
         

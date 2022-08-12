@@ -1,3 +1,7 @@
-.detail-img{
+/* .detail-img{
     width:100%;
+} */
+
+.item-container{
+    border: solid greenyellow;
 }

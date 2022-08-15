@@ -1,7 +1,7 @@
 import {useState} from 'react';
 import './ItemCount.css';
 
-function ItemCount({item, initial}){
+function ItemCount({item, initial, onAdd}){
 
     let btnDisabled = false;
 
@@ -23,11 +23,11 @@ function ItemCount({item, initial}){
         }        
     }    
 
-    function agregarCarrito(){
+    /* function agregarCarrito(){
         if (contador!==0){
             alert(`Se añadio ${contador} unidades de ${item.title} al carrito`);
         }     
-    }
+    } */
     
     return(
 
@@ -40,7 +40,8 @@ function ItemCount({item, initial}){
                 <input type="text" className="form-control" value={contador} readOnly={true}></input>
                 <button className="btn btn-outline-secondary" type="button" onClick={aumentarContador}>+</button>
             </div>
-            <button type="button" className="btn btn-outline-primary" onClick={agregarCarrito} disabled={btnDisabled}>Agregar a Carrito</button> 
+            <button type="button" className="btn btn-outline-primary" onClick={()=>onAdd(contador)} disabled={btnDisabled}>Agregar a Carrito</button> 
+            {/* <button type="button" className="btn btn-outline-primary" onClick={agregarCarrito} disabled={btnDisabled}>Agregar a Carrito</button>  */}
         </div>
     );
 }

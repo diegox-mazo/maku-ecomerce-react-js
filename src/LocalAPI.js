@@ -22,7 +22,7 @@ const products = [
     {
         id: 3,
         title: "Morral Kiran",
-        pictureUrl: "https://cdn-icons.flaticon.com/png/512/4209/premium/4209081.png?token=exp=1660159771~hmac=23c9613da8267b0324fcfb331ac209c8",
+        pictureUrl: "https://cdn-icons-png.flaticon.com/512/7533/7533857.png",
         price: 169.90,
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id sem lorem.",
         colors: "Blanco, Negro",
@@ -32,7 +32,7 @@ const products = [
     {
         id: 4,
         title: "Morral Plegable Collapse",
-        pictureUrl: "https://cdn-icons.flaticon.com/png/512/4442/premium/4442255.png?token=exp=1660159777~hmac=754cfc04858537346531dbe75953bcc4",
+        pictureUrl: "https://cdn-icons-png.flaticon.com/512/3132/3132689.png",
         price: 159.90,
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id sem lorem.",
         colors: "Verde, Negro",
@@ -42,7 +42,7 @@ const products = [
     {
         id: 5,
         title: "Tula Super Cool 2 Go",
-        pictureUrl: "https://cdn-icons.flaticon.com/png/512/4063/premium/4063291.png?token=exp=1660159783~hmac=38f48f551f7d1a6b95c657c084819848",
+        pictureUrl: "https://cdn-icons-png.flaticon.com/512/3132/3132713.png",
         price: 149.90,
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id sem lorem.",
         colors: "Azul, Verde",
@@ -52,7 +52,7 @@ const products = [
     {
         id: 6,
         title: "Morral Rhimon",
-        pictureUrl: "https://cdn-icons.flaticon.com/png/512/3958/premium/3958285.png?token=exp=1660159877~hmac=19041046216500a4e567357c2cfcaa83",
+        pictureUrl: "https://cdn-icons-png.flaticon.com/512/3132/3132692.png",
         price: 249.90,
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed id sem lorem.",
         colors: "Verde, Negro",

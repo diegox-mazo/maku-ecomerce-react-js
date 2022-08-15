@@ -18,6 +18,7 @@ function App() {
           <Route path='/' element = {<Home/>}></Route>
           <Route path='/category/:categoryId' element={<ItemListContainer></ItemListContainer>}></Route>
           <Route path='/detail/:productId' element={<ItemDetailContainer></ItemDetailContainer>}></Route>
+          <Route path='/cart' element={null}></Route>
 
           <Route path='/*' element ={<h1>Page not found!!</h1>}></Route>
 

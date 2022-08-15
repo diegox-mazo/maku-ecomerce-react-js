@@ -1,12 +1,12 @@
 import { NavLink } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
-import ItemCount from '../ItemCount/ItemCount';
+// import ItemCount from '../ItemCount/ItemCount';
 import './Item.css';
 
 
 function Item({item}){
 
-    const initial = 1;
+    // const initial = 1;
 
     // const [show, setShow] = useState(false);
 
@@ -36,7 +36,7 @@ function Item({item}){
                     
                 </div>
             </div>
-            <ItemCount item={item} initial={initial}></ItemCount>
+            {/* <ItemCount item={item} initial={initial}></ItemCount> */}
 
             {/* ItemDetailContainer */}
             {/* {

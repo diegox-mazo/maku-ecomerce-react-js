@@ -1,20 +1,25 @@
-import {useState} from 'react';
+import {useContext, useState} from 'react';
 import { NavLink } from 'react-router-dom';
+import { CartContext } from '../../context/CartContext.js';
 import ItemCount from '../ItemCount/ItemCount.js';
 import './ItemDetail.css';
 
 function ItemDetail({item}){
 
+    const context = useContext(CartContext);
+    console.log(context);
+
     const initial = 1;
 
     const [show, setShow] = useState(true);
 
-    const handleOnAdd=(contador)=>{
-        if (contador !== 0){
-            alert(`Se añadio ${contador} unidades de ${item.title} al carrito`);
-        }
-
-        setShow(false);
+    const handleOnAdd=(quantity)=>{
+        if (quantity !== 0){
+            alert(`Se añadio ${quantity} unidades de ${item.title} al carrito`);
+            
+            context.addItem(item, quantity);
+            setShow(false);
+        }        
     }
 
 

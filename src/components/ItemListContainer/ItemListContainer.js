@@ -6,7 +6,7 @@ import './ItemListContainer.css';
 import ItemList from '../ItemList/ItemList';
 
 
-function ItemListContainer(prop){
+function ItemListContainer(){
 
     const [products, setProducts] = useState([]);  //devuelve un Array de datos [].
     const  {categoryId} = useParams(); //parametros por URL 
@@ -34,7 +34,6 @@ function ItemListContainer(prop){
 
     return(
         <div className='list-container'>
-            <h2 className='mb-5'>{prop.children}</h2>
             <div>
                 <ItemList products = {products}></ItemList>
             </div>

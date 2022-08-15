@@ -1,7 +1,12 @@
 import cartLogo from './shopping-cart.png';
 import './CartWidget.css';
+// import {CartContext} from '../../context/CartContext';
+
 
 function CartWidget(prop){
+
+
+
     return(
         <div className='shopping-cart ms-5 pe-3'>
             <a href="#link" className="d-flex link-primary">

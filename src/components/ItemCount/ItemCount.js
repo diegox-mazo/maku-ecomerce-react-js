@@ -1,7 +1,7 @@
 import {useState} from 'react';
 import './ItemCount.css';
 
-function ItemCount({item, initial, onAdd}){
+function ItemCount({item, initial = 1, onAdd}){
 
     let btnDisabled = false;
 
@@ -9,6 +9,7 @@ function ItemCount({item, initial, onAdd}){
         btnDisabled= true;
         initial = 0;        
     }
+    
     const [contador, setContador] = useState(initial);   
 
     function aumentarContador(){

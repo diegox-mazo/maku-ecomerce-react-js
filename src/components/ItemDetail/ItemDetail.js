@@ -7,17 +7,13 @@ import './ItemDetail.css';
 function ItemDetail({item}){
 
     const context = useContext(CartContext);
-    console.log(context);
-
-    const initial = 1;
+    console.log(context);    
 
     const [show, setShow] = useState(true);
 
     const handleOnAdd=(quantity)=>{
-        if (quantity !== 0){
-            alert(`Se añadio ${quantity} unidades de ${item.title} al carrito`);
-            
-            context.addItem(item, quantity);
+        if (quantity !== 0){            
+            context.addToCart({...item, quantity});
             setShow(false);
         }        
     }
@@ -50,14 +46,18 @@ function ItemDetail({item}){
                 {
                     (show)? 
                     <div className='col mt-lg-5'>
-                        <ItemCount item={item} initial={initial} onAdd={handleOnAdd}></ItemCount>
+                        <ItemCount item={item} initial={1} onAdd={handleOnAdd}></ItemCount>
                     </div> 
                     :                        
                         <div className='mt-5'>
                             <NavLink to={`/cart`}>
-                                <button className='btn btn-danger btn-lg' type='button'>Finalizar Compra</button>
-                            </NavLink>                            
-                        </div>                   
+                                <button className='btn btn-danger btn-lg detail-btn m-2' type='button'>Finalizar Compra</button>
+                            </NavLink>
+                            <NavLink to={`/`}>
+                                <button className='btn btn-primary btn-lg detail-btn' type='button'>Seguir Comprando</button>
+                            </NavLink>                          
+                        </div>
+                                          
                 }             
 
             </div>

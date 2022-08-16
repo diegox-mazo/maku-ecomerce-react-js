@@ -5,3 +5,8 @@
 .item-container{
     border: solid greenyellow;
 }
+
+.detail-btn{
+    min-width: 150px;
+    width: 150px;
+}

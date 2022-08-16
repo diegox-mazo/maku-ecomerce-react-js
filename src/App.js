@@ -14,11 +14,9 @@ function App() {
       <CartCustomContext>
 
         <BrowserRouter>
-
-          <header>
-            <Botonera></Botonera>
-          </header>
-
+ 
+          <Botonera></Botonera>
+          
           <Routes>
             <Route path='/' element = {<Home></Home>}></Route>
             <Route path='/category/:categoryId' element={<ItemListContainer></ItemListContainer>}></Route>

@@ -2,6 +2,7 @@ import {useState,useEffect} from 'react';
 import {getProductById} from '../../LocalAPI.js';
 import {useParams} from 'react-router-dom';
 import ItemDetail from '../ItemDetail/ItemDetail.js';
+import './ItemDetailContainer.css';
 
 
 function ItemDetailContainer (){
@@ -22,6 +23,9 @@ function ItemDetailContainer (){
 
     },[productId]); //Cuando cambia el ProductId
 
+    if(product===undefined){
+        return <div>...Cargando...</div>
+    }
     
     return (
         <ItemDetail item = {product}></ItemDetail>

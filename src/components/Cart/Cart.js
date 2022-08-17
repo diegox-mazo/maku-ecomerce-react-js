@@ -11,8 +11,9 @@ function Cart(){
         
         <div>
             <h1>Cart</h1>
+            
             {
-                cart.map((product)=>{
+                cart && cart.length && cart.map((product)=>{
                     return  <div key={product.id}>ID: {product.id} - Nombre: {product.title} - Cantidad: {product.quantity}</div>
                 })
             }

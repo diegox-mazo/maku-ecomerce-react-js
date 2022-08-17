@@ -56,8 +56,7 @@ function ItemDetail({item}){
                             <NavLink to={`/`}>
                                 <button className='btn btn-primary btn-lg detail-btn' type='button'>Seguir Comprando</button>
                             </NavLink>                          
-                        </div>
-                                          
+                        </div>                                          
                 }             
 
             </div>

@@ -6,20 +6,24 @@ function CartCustomContext({children}){
 
     const [cart, setCart] = useState([]);
 
-
+    //{item, quantity} = product
     function addToCart(product){
-
-        if(isInCart(product.id)===false){
-            console.log(`ID: ${product.id}. ${product.title} x ${product.quantity} agregado al Cart`);
-            setCart([...cart, product]);
-            console.log(cart);
-            
-            alert(`Se añadio ${product.quantity} unidades de ${product.title} al carrito`);
+        const inCart = isInCart(product.id);
+        if(inCart){
+            const updatedCart = cart.map((itemEnCarrito)=>{
+                if(itemEnCarrito.id === product.id){
+                    return {...itemEnCarrito, quantiy: (itemEnCarrito.quantiy + product.quantiy)}
+                }else{
+                    return itemEnCarrito;  
+                }                               
+            });
+            setCart(updatedCart);
         }
         else{
-            alert('El producto ya se encuentra en el carrito')
-        }           
-  
+            setCart([...cart, product]);
+        }
+        console.log("Cart: ",cart);            
+        alert(`Se añadio ${product.quantity} unidades de ${product.title} al carrito`);
     }
 
     function isInCart(id){

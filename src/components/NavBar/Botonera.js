@@ -31,7 +31,7 @@ function Botonera(){
                 </Nav>
                 </Navbar.Collapse>
                 <NavLink to={'/cart'}>
-                    <CartWidget counter={4}/>
+                    <CartWidget/>
                 </NavLink>
             </Container>
         </Navbar>

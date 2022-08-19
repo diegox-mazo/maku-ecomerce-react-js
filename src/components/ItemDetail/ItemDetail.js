@@ -7,7 +7,7 @@ import './ItemDetail.css';
 function ItemDetail({item}){
 
     const context = useContext(CartContext);
-    console.log(context);    
+    // console.log(context);    
 
     const [show, setShow] = useState(true);
 

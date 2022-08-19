@@ -8,11 +8,13 @@ function CartCustomContext({children}){
 
     //{item, quantity} = product
     function addToCart(product){
+        console.log("Producto agregado :", product);//TODO borrar
         const inCart = isInCart(product.id);
+        console.log("is In Cart ? :", inCart);//TODO borrar
         if(inCart){
             const updatedCart = cart.map((itemEnCarrito)=>{
                 if(itemEnCarrito.id === product.id){
-                    return {...itemEnCarrito, quantiy: (itemEnCarrito.quantiy + product.quantiy)}
+                    return {...itemEnCarrito, quantity: (itemEnCarrito.quantity + product.quantity)}
                 }else{
                     return itemEnCarrito;  
                 }                               

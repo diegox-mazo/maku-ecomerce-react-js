@@ -36,7 +36,7 @@ function Cart(){
             <h1 className="m-4">Cart</h1>
             <div className="container text-center mt-5">
                 <div className="row">
-                    <div className="col-md-9 me-2">
+                    <div className="col-md-8 me-2">
                     {
                         cart && cart.length && cart.map((product)=>{
                             return (
@@ -55,9 +55,9 @@ function Cart(){
                     }
                     </div>
 
-                    <div className="col-md-2 border border-2 rounded p-3 mb-3">
+                    <div className="col-md-3 border border-2 rounded p-3 mb-3">
                         <p className='fw-bold'>TOTAL:</p>
-                        <p className='mb-3 fw-bold fs-4'>${total.toLocaleString("en",{style:"currency", currency: "COL"})}</p>
+                        <p className='mb-3 fw-bold fs-5'>${total.toLocaleString("en",{style:"currency", currency: "COL"})}</p>
                         <button className='btn btn-primary' onClick={()=>removeAll()}>Finalizar</button>
                     </div>                    
                 </div>

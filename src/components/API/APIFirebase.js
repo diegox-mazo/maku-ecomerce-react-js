@@ -1,7 +1,7 @@
-//npm install firebase
+//npm install firebase --save
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import {getFirestore, collection, getDocs, query, where} from 'firebase/firestore';
+import {getFirestore, collection, getDocs, query, where, doc, getDoc} from 'firebase/firestore';
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -78,7 +78,7 @@ export function getProductById(productId){
     return new Promise((resolve, reject)=>{
         
         const itemRef = doc(db,'maku-products', productId);
-        getDocs(itemRef).then((snapshot)=>{
+        getDoc(itemRef).then((snapshot)=>{
             if(snapshot.exists()){
                 
                 console.log({id:snapshot.id,...snapshot.data()});

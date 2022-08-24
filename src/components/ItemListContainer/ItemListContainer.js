@@ -1,5 +1,6 @@
 import {useState,useEffect} from 'react';
-import {getProducts, getProductsByCategory} from '../../LocalAPI.js';
+//import {getProducts, getProductsByCategory} from '../../LocalAPI.js';
+import {getProducts, getProductsByCategory} from '../API/APIFirebase.js';
 import {useParams} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './ItemListContainer.css';

@@ -11,7 +11,7 @@ function Item({item}){
                 <img src={item.pictureUrl} className="card-img-top" alt={item.title}/>
                 <div className="card-body">
                     <h5 className="card-title">{item.title}</h5>
-                    <p className="card-text">${item.price}</p>
+                    <p className="card-text">${item.price.toLocaleString("en",{style:"currency", currency: "COL"})}</p>
 
                     <NavLink to={`/detail/${item.id}`}>
                         <Button variant="secondary">Detalles de Producto</Button>

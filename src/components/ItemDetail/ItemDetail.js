@@ -34,6 +34,9 @@ function ItemDetail({item}){
                     <h5 className="card-title my-3">Descripcion:</h5>
                     <p>{item.description}</p>
 
+                    <h5 className="card-title my-3">Categoria:</h5>
+                    <p className="card-text">{item.category}</p>
+
                     <h5 className="card-title my-3">Colores:</h5>
                     <p className="card-text">{item.colors}</p>
 

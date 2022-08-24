@@ -1,5 +1,6 @@
 import {useState,useEffect} from 'react';
-import {getProductById} from '../../LocalAPI.js';
+//import {getProductById} from '../../LocalAPI.js';
+import {getProductById} from '../API/APIFirebase.js'
 import {useParams} from 'react-router-dom';
 import ItemDetail from '../ItemDetail/ItemDetail.js';
 import './ItemDetailContainer.css';

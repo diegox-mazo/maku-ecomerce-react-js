@@ -1,7 +1,7 @@
 //npm install firebase --save
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import {getFirestore, collection, getDocs, query, where, doc, getDoc} from 'firebase/firestore';
+import {getFirestore, collection, getDocs, query, where, doc, getDoc, setDoc, updateDoc, increment} from 'firebase/firestore';
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -88,5 +88,20 @@ export function getProductById(productId){
         },(error)=>{
             reject('error al traer los datos', error);
         });
+    });
+}
+
+export async function createOrderInFirestore(order){
+    const newOrderRef = doc(collection(db, "orders"));
+    await setDoc(newOrderRef, order);
+    return newOrderRef;
+}
+
+export function actualizarCarrito(cart){
+    cart.forEach(async item => {
+        const itemRef = doc(db, "maku-products", item.id)
+        await updateDoc(itemRef,{
+            stock: increment(-item.quantity)
+        })
     });
 }

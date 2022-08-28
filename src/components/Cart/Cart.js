@@ -1,8 +1,10 @@
+import { render } from '@testing-library/react';
 import { serverTimestamp } from 'firebase/firestore';
 import { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
 import {CartContext} from '../../context/CartContext';
-import {createOrderInFirestore, actualizarCarrito} from '../API/APIFirebase.js'
+import {createOrderInFirestore, actualizarCarrito} from '../API/APIFirebase.js';
+import UserForm from '../UserForm/UserForm';
 import './Cart.css';
 
 function Cart(){
@@ -16,7 +18,8 @@ function Cart(){
         {
         id: item.id,
         title: item.title,
-        price: item.price
+        price: item.price,
+        quantity: item.quantity
         }
     ));
 
@@ -28,13 +31,13 @@ function Cart(){
         return suma;
     }
 
-    function crearOrder(){
+    const crearOrder = (datos)=>{
         let order = {
             buyer:{
-                name: "Leo Mesi",
-                phone: "987654321",
-                email: "leo@email.com",
-                address: "calle"
+                name: datos.name,
+                phone: datos.phone,
+                email: datos.email,
+                address: datos.address,
             },
             items: itemsForDB,
             total: total,
@@ -48,6 +51,12 @@ function Cart(){
             removeAll();
         })
         .catch((err)=>{console.log(err)});        
+    }
+
+    function registrarUsuario(){
+        render(
+            <UserForm onAction = {crearOrder}></UserForm>
+        )
     }
 
     
@@ -102,7 +111,8 @@ function Cart(){
                     <div className="col-md-3 border border-2 rounded p-3 mb-3">
                         <p className='fw-bold mb-4'>TOTAL ORDER:</p>
                         <p className='mb-4 fw-bold fs-5'>${total.toLocaleString("en",{style:"currency", currency: "COL"})}</p>
-                        <button className='btn btn-primary mb-2' onClick={()=>crearOrder()}>Finalizar Compra</button>
+                        {/* <button className='btn btn-primary mb-2' onClick={()=>crearOrder()}>Finalizar Compra</button> */}
+                        <button className='btn btn-primary mb-2' onClick={()=>registrarUsuario()}>Finalizar Compra</button>
                     </div>                    
                 </div>
             </div>            

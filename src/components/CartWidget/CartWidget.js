@@ -3,7 +3,6 @@ import cartLogo from './shopping-cart.png';
 import './CartWidget.css';
 import { useContext } from 'react';
 import { CartContext } from '../../context/CartContext';
-// import {CartContext} from '../../context/CartContext';
 
 
 function CartWidget(){

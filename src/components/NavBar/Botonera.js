@@ -27,7 +27,7 @@ function Botonera(){
                     <NavLink className='nav-link' to={"/category/Sport"}>DEPORTIVO</NavLink>
                     <NavLink className='nav-link' to={"/category/Formal"}>FORMAL</NavLink>
                     <NavLink className='nav-link' to={"/category/Scolar"}>ESCOLAR</NavLink>
-                    <NavLink className='nav-link' to="#link">CONTACTO</NavLink>                    
+                    {/* <NavLink className='nav-link' to="#link">CONTACTO</NavLink>                     */}
                 </Nav>
                 </Navbar.Collapse>
                 <NavLink to={'/cart'}>

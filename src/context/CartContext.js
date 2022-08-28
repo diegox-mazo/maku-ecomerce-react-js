@@ -6,11 +6,11 @@ function CartCustomContext({children}){
 
     const [cart, setCart] = useState([]);
 
-    //{item, quantity} = product
+    //Un product se compone de {item, quantity}
     function addToCart(product){
-        console.log("Producto agregado :", product);//TODO borrar
+        console.log("Producto agregado :", product);
         const inCart = isInCart(product.id);
-        console.log("is In Cart ? :", inCart);//TODO borrar
+        console.log("is In Cart ? :", inCart);
         if(inCart){
             const updatedCart = cart.map((itemEnCarrito)=>{
                 if(itemEnCarrito.id === product.id){

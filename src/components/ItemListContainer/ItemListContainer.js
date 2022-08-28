@@ -34,25 +34,16 @@ function ItemListContainer(){
     
 
     return(
-        <div className='list-container'>
-            <div>
-                <ItemList products = {products}></ItemList>
+        <div>
+            <div className='list-container mb-5'>
+                <div>
+                    <ItemList products = {products}></ItemList>
+                </div>                
             </div>
-            
+            <div className='p-5 mt-5'></div><div className='p-3 mt-3'></div>
         </div>
+        
     );
 }
 
 export default ItemListContainer;
-
-
-/* async function consumirProductsAPI(){
-            const respuestaAPI = await fetch('../../products.json');
-            console.log(respuestaAPI);
-            const miJSON = await respuestaAPI.json();
-            console.log(miJSON);
-            setTimeout(function(){
-                setProducts(miJSON);
-            },2000);               
-        }
-        consumirProductsAPI(); */

@@ -5,6 +5,7 @@ import Home from './Pages/Home.js';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer.js';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer.js';
 import Cart from './components/Cart/Cart.js';
+import Footer from './components/Footer/Footer';
 import './App.css';
 
 
@@ -24,8 +25,9 @@ function App() {
             <Route path='/cart' element={<Cart></Cart>}></Route>
 
             <Route path='/*' element ={<h1>Page not found!!</h1>}></Route>
-
           </Routes>
+
+          <Footer></Footer>
 
         </BrowserRouter>
 

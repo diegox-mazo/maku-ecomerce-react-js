@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/maku-ecomerce-react-js/static/css/main.82c0beac.css",
+    "main.js": "/maku-ecomerce-react-js/static/js/main.edf3fc93.js",
+    "static/js/787.ae8eb44b.chunk.js": "/maku-ecomerce-react-js/static/js/787.ae8eb44b.chunk.js",
+    "static/media/logo.png": "/maku-ecomerce-react-js/static/media/logo.4f446be0938f87be74e7.png",
+    "static/media/shopping-cart.png": "/maku-ecomerce-react-js/static/media/shopping-cart.96c73cb49987ccdf1154.png",
+    "index.html": "/maku-ecomerce-react-js/index.html",
+    "main.82c0beac.css.map": "/maku-ecomerce-react-js/static/css/main.82c0beac.css.map",
+    "main.edf3fc93.js.map": "/maku-ecomerce-react-js/static/js/main.edf3fc93.js.map",
+    "787.ae8eb44b.chunk.js.map": "/maku-ecomerce-react-js/static/js/787.ae8eb44b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.82c0beac.css",
+    "static/js/main.edf3fc93.js"
+  ]
+}
